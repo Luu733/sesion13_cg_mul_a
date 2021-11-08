@@ -68,6 +68,7 @@ function init() {
     ang_rad= (Angulo)*((2*Math.PI)/(360)); //Conversión de grados a radianes.
     Angulo_2= ((Math.PI)/4)-ang_rad;
     valor=(Math.cos(Angulo_2))*diagonal;
+
     Cubo.push(cubo(dim, dim, dim, 'red', 'Physical', false)); //Se agrega el cubo 0.
 
     Cubo.push(cubo(dim, dim, dim, 'green', 'Physical', false)); //Se agrega el cubo 1.
@@ -90,8 +91,8 @@ function init() {
 
     }
 
-    Cubo[0].rotateY(Angulo);
-    Cubo[2].rotateY(Angulo);
+    Cubo[0].rotateY(ang_rad);
+    Cubo[2].rotateY(ang_rad);
 
 
     //Posicionamiento de la cámara
